@@ -12,7 +12,6 @@ import numpy as np
 from matplotlib.backends.backend_pdf import PdfPages
 
 # Plot type
-# matplotlib.style.use('ggplot')
 plt.style.use('ggplot')
 
 #Seting plot fontsize and font family
