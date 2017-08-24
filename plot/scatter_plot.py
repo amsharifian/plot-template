@@ -10,12 +10,13 @@ import matplotlib as mpl
 import matplotlib
 import numpy as np
 from matplotlib.backends.backend_pdf import PdfPages
+from matplotlib.ticker import MultipleLocator, FormatStrFormatter
 
 # Plot type
 plt.style.use('ggplot')
 
 #Seting plot fontsize and font family
-pd.set_option('display.mpl_style', 'default')
+# pd.set_option('display.mpl_style', 'default')
 plt.rcParams['figure.figsize'] = (15, 9)
 mpl.rc('font', family='serif')
 mpl.rcParams['xtick.major.pad']= '12'
@@ -33,6 +34,12 @@ N = len(df['name'])
 ind = np.arange(N)
 # width = 0.8
 
+majorLocator = MultipleLocator(0.2)
+minorLocator = MultipleLocator(0.2)
+# majorFormatter = FormatStrFormatter('%d')
+ax.xaxis.set_major_locator(majorLocator)
+ax.xaxis.set_minor_locator(minorLocator)
+# ax.xaxis.set_major_formatter(majorFormatter)
 
 # Instantiating the X bar
 # cbars = ax.bar(ind+0.8, df['mul'].values.tolist(), \
@@ -43,6 +50,9 @@ ms = ['+', '*', 'o']
 
 for n in np.arange(len(df['name'])):
     myscatter = ax.scatter(df['Area'][n], df['Power'][n], s=[350], marker=ms[n])
+
+for n in np.arange(len(df['name'])):
+    ax.text(df['Area'][n]-0.06, df['Power'][n]-0.07, df['name'][n], fontsize=16)
 
 # Put limit on Y axis
 plt.ylim(0, 1.1)
@@ -56,10 +66,10 @@ ax.set_ylabel('Y LABEL',fontsize=32)
 # ax.set_xticklabels(u.rename(df['name']))
 ax.set_facecolor('white')
 
-plt.gca().xaxis.grid(False)
-plt.gca().yaxis.grid(True, color='black')
+plt.gca().xaxis.grid(True, color='gray')
+plt.gca().yaxis.grid(True, color='gray')
 
-plt.tick_params( axis='x', which='both', bottom='off', top='off')
+plt.tick_params( axis='x', which='both', bottom='on', top='off', width=2, length=6)
 plt.tick_params( axis='y', which='both', right='off' )
 
 ax.spines['bottom'].set_color('black')
