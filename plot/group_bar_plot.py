@@ -7,14 +7,17 @@ import math
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib as mpl
+import matplotlib
 import numpy as np
 from random import randint
+from matplotlib.backends.backend_pdf import PdfPages
 from matplotlib.backends.backend_pdf import PdfPages
 
 # Plot type
 plt.style.use('ggplot')
 
-pd.set_option('display.mpl_style', 'default')
+matplotlib.pyplot.style.use('default')
+# pd.set_option('display.mpl_style', 'default')
 plt.rcParams['figure.figsize'] = (30, 9)
 mpl.rc('font', family='serif')
 mpl.rcParams['xtick.major.pad']= '12'
@@ -42,7 +45,7 @@ for x in np.arange(N):
    ind[x] = c
    c = c + 1
 
-print(ind)
+# print(ind)
 
 # bar.hatch -> puting patterns on the colors
 opbars = ax.bar(ind, df['ColA'].values.tolist(), width, ecolor='k',
@@ -76,7 +79,7 @@ ax.text(3.2, -7.5, 'This is test', fontsize=16)
 ax.text(6.2, -7.5, 'This is test', fontsize=16)
 
 # Set the background color
-# ax.set_axis_bgcolor('white')
+# ax.set_facecolor('white')
 
 plt.gca().xaxis.grid(False)
 plt.gca().yaxis.grid(True, color='black')
@@ -92,5 +95,4 @@ ax.spines['left'].set_color('black')
 # Adding legend and the position
 # ax.legend((pbars[0], opbars[0], cbars[0], prec[0]), ('A', 'B', 'C', 'D'), bbox_to_anchor=(1, 0.92), fontsize=22)
 
-fig.savefig('test.pdf',
-    facecolor=fig.get_facecolor(), bbox_inches='tight')
+fig.savefig('test.pdf',facecolor=fig.get_facecolor(), bbox_inches='tight')

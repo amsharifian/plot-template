@@ -17,6 +17,7 @@ plt.style.use('ggplot')
 
 #Seting plot fontsize and font family
 # pd.set_option('display.mpl_style', 'default')
+matplotlib.pyplot.style.use('default')
 plt.rcParams['figure.figsize'] = (15, 9)
 mpl.rc('font', family='serif')
 mpl.rcParams['xtick.major.pad']= '12'
@@ -78,5 +79,4 @@ ax.spines['right'].set_color('black')
 ax.spines['left'].set_color('black')
 
 # Saving the plot
-fig.savefig('test.pdf',
-            facecolor=fig.get_facecolor(), bbox_inches='tight')
+fig.savefig('test.pdf',facecolor=fig.get_facecolor(), bbox_inches='tight')

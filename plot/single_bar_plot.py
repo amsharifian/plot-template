@@ -15,7 +15,8 @@ from matplotlib.backends.backend_pdf import PdfPages
 plt.style.use('ggplot')
 
 #Seting plot fontsize and font family
-pd.set_option('display.mpl_style', 'default')
+# pd.set_option('display.mpl_style', 'default')
+matplotlib.pyplot.style.use('default')
 plt.rcParams['figure.figsize'] = (15, 9)
 mpl.rc('font', family='serif')
 mpl.rcParams['xtick.major.pad']= '12'
