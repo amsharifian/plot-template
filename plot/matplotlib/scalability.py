@@ -1,6 +1,6 @@
 # %matplotlib inline
 import sys
-sys.path.append('../utils')
+sys.path.append('../../utils')
 import utils as u
 import math
 
@@ -24,7 +24,7 @@ mpl.rcParams['xtick.major.pad']= '12'
 mpl.rcParams['ytick.major.pad']= '8'
 
 #Loading data
-df = pd.read_csv('../data/cilk_for_test09_sweep4.csv')
+df = pd.read_csv('../../data/cilk_for_test09_sweep4.csv')
 #df.iloc[1:5,:] = df.iloc[1:5,:].applymap(lambda x: (300.0 / x)*50)
 #df.iloc[1,1:5] = df.iloc[1,1:5].multiply(df.iloc[1,0])
 #df.iloc[2,1:5] = df.iloc[2,1:5].multiply(df.iloc[2,0])

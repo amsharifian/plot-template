@@ -1,6 +1,6 @@
 # %matplotlib inline
 import sys
-sys.path.append('../utils')
+sys.path.append('../../utils')
 import utils as u
 import math
 
@@ -24,7 +24,7 @@ mpl.rcParams['xtick.major.pad']= '12'
 mpl.rcParams['ytick.major.pad']= '8'
 
 #Loading data
-df = pd.read_csv('../data/tile_ins.csv')
+df = pd.read_csv('../../data/tile_ins.csv')
 
 
 fig, axes = plt.subplots(2,2)

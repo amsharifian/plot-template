@@ -1,6 +1,6 @@
 # %matplotlib inline
 import sys
-sys.path.append('../utils')
+sys.path.append('../../utils')
 import utils as u
 import math
 
@@ -23,7 +23,7 @@ mpl.rc('font', family='serif')
 mpl.rcParams['xtick.major.pad']= '12'
 mpl.rcParams['ytick.major.pad']= '8'
 
-df = pd.read_csv('../data/04-test.csv')
+df = pd.read_csv('../../data/04-test.csv')
 
 fig, ax = plt.subplots()
 plt.xticks(rotation=90)
