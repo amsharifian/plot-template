@@ -7,12 +7,19 @@ What are the choices for ploting data?
 1.  Seaborn
 2.  pandas
 3.  Matplotlib
+4. Paletteable
 
 
 # Seaborn
 Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics.
 
 Seaborn provides a very high-level interface. It's versy hard and imposible in some cases to customize the plot, for instance it's not easily possible to plot `stack plot`.
+
+## Color paletter:
+
+I use [Paletteable](https://jiffyclub.github.io/palettable/#) for coloring:
+
+https://jiffyclub.github.io/palettable/colorbrewer/sequential/
 
 
 # Pandas
