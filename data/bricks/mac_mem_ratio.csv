@@ -1,0 +1,4 @@
+layer,per_layer_mac_util,dp_mac_util,pdp_mac_util
+early,7.67,8.79,17.99
+middle,10.00,14.03,40.43
+late,9.30,10.87,65.47
