@@ -5,8 +5,8 @@ import utils as u
 import math
 
 import pandas as pd
+import matplotlib
 import matplotlib.pyplot as plt
-import matplotlib as mpl
 import numpy as np
 from matplotlib.backends.backend_pdf import PdfPages
 
@@ -16,9 +16,9 @@ plt.style.use('ggplot')
 # pd.set_option('display.mpl_style', 'default')
 matplotlib.pyplot.style.use('default')
 plt.rcParams['figure.figsize'] = (30, 9)
-mpl.rc('font', family='serif')
-mpl.rcParams['xtick.major.pad']= '12'
-mpl.rcParams['ytick.major.pad']= '8'
+matplotlib.rc('font', family='serif')
+matplotlib.rcParams['xtick.major.pad']= '12'
+matplotlib.rcParams['ytick.major.pad']= '8'
 
 df = pd.read_csv('../../data/03-test.csv')
 
